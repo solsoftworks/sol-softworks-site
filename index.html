@@ -3,150 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gospel Guide — Privacy Policy</title>
+  <title>Sol Softworks</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: Georgia, 'Times New Roman', serif;
-      background: #F5E6C8;
-      color: #2C1810;
-      line-height: 1.8;
-    }
-    header {
-      background: #2C1810;
-      color: #F5E6C8;
-      text-align: center;
-      padding: 48px 24px;
-    }
-    header h1 {
-      font-size: 2rem;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    header p {
-      font-size: 1rem;
-      color: #CCAA66;
-      font-style: italic;
-    }
-    nav {
-      background: #8B6914;
-      text-align: center;
-      padding: 12px;
-    }
-    nav a {
-      color: #F5E6C8;
-      text-decoration: none;
-      margin: 0 16px;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-    nav a:hover { text-decoration: underline; }
-    main {
-      max-width: 780px;
-      margin: 48px auto;
-      padding: 0 24px 64px;
-    }
-    h2 {
-      font-size: 1.4rem;
-      color: #8B6914;
-      margin: 40px 0 12px;
-      letter-spacing: 1px;
-      border-bottom: 1px solid #CCAA66;
-      padding-bottom: 8px;
-    }
-    h3 {
-      font-size: 1.05rem;
-      color: #5C3D2E;
-      margin: 24px 0 8px;
-    }
-    p { margin-bottom: 14px; }
-    ul {
-      margin: 0 0 14px 24px;
-    }
-    ul li { margin-bottom: 6px; }
-    a { color: #8B6914; }
-    .updated {
-      font-size: 0.85rem;
-      color: #5C3D2E;
-      font-style: italic;
-      margin-bottom: 32px;
-    }
-    footer {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0f0f0f;
+      color: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
       padding: 24px;
-      font-size: 0.8rem;
-      color: #5C3D2E;
-      border-top: 1px solid #CCAA66;
+    }
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+    .tagline {
+      font-size: 1rem;
+      color: #888;
+      margin-bottom: 48px;
+      letter-spacing: 1px;
+    }
+    .apps {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 400px;
+    }
+    .app-card {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 16px;
+      padding: 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .app-card:hover {
+      border-color: #555;
+      transform: translateY(-2px);
+    }
+    .app-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #ffffff;
+    }
+    .app-desc {
+      font-size: 0.9rem;
+      color: #888;
+      line-height: 1.5;
+    }
+    .app-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #B8860B;
+      background: #1f1a0f;
+      border: 1px solid #B8860B;
+      border-radius: 4px;
+      padding: 2px 8px;
+      margin-bottom: 10px;
+    }
+    footer {
+      position: fixed;
+      bottom: 24px;
+      font-size: 0.75rem;
+      color: #444;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>✦ Gospel Guide ✦</h1>
-  <p>Bring your burdens. Find wisdom in scripture.</p>
-</header>
+  <div class="logo">Sol Softworks</div>
+  <div class="tagline">Independent software, thoughtfully made.</div>
 
-<nav>
-  <a href="#privacy">Privacy Policy</a>
-  <a href="mailto:gospelguideapp@gmail.com">Contact</a>
-</nav>
+  <div class="apps">
+    <div class="app-card">
+      <div class="app-badge">Android</div>
+      <div class="app-name">✦ Gospel Guide</div>
+      <div class="app-desc">AI-powered Bible guidance. Bring your burdens, find wisdom in scripture.</div>
+    </div>
+  </div>
 
-<main id="privacy">
-  <h2>Privacy Policy</h2>
-  <p class="updated">Last updated: June 2025</p>
-
-  <p>Gospel Guide ("we", "our", or "the app") is developed by Sol Softworks. This policy explains what information we collect, how we use it, and your rights.</p>
-
-  <h2>Information We Collect</h2>
-
-  <h3>Anonymous Usage (No Account Required)</h3>
-  <p>Gospel Guide works without creating an account. By default, we assign your device an anonymous session ID via Supabase. No name, email, or personal details are collected or required.</p>
-
-  <h3>Google Sign-In (Optional)</h3>
-  <p>If you choose to sign in with Google, we receive your Google account name and email address. This is used solely to link your conversation history and subscription to your account across devices. We do not share this information with third parties.</p>
-
-  <h3>Conversations and Favourites</h3>
-  <p>Your chat conversations and saved favourite responses are stored securely in our database (Supabase, hosted in the EU). This allows you to access your history across sessions. You can delete your data at any time by contacting us.</p>
-
-  <h3>Subscription Information</h3>
-  <p>If you purchase a Supporter subscription, the transaction is handled by Google Play. We use RevenueCat to manage and verify subscription status. RevenueCat receives your Google Play purchase token — we do not store your payment card details.</p>
-
-  <h3>AI Queries</h3>
-  <p>When you ask a question in the app, your message is sent to our backend and then to Anthropic's Claude API to generate a response. Questions are processed to provide answers and are not used to train AI models. Please do not include sensitive personal information in your questions.</p>
-
-  <h2>Third-Party Services</h2>
-  <ul>
-    <li><strong>Supabase</strong> — authentication and database (EU West). <a href="https://supabase.com/privacy" target="_blank">Privacy policy</a></li>
-    <li><strong>Google Sign-In</strong> — optional account sign-in. <a href="https://policies.google.com/privacy" target="_blank">Privacy policy</a></li>
-    <li><strong>RevenueCat</strong> — subscription management. <a href="https://www.revenuecat.com/privacy" target="_blank">Privacy policy</a></li>
-    <li><strong>Anthropic</strong> — AI responses. <a href="https://www.anthropic.com/privacy" target="_blank">Privacy policy</a></li>
-    <li><strong>OpenAI</strong> — used for generating search embeddings over Bible verses. <a href="https://openai.com/privacy" target="_blank">Privacy policy</a></li>
-  </ul>
-
-  <h2>Push Notifications</h2>
-  <p>Gospel Guide can send a daily notification reminding you to read the Daily Word. Notifications are scheduled locally on your device — no notification data is sent to our servers. You can disable notifications at any time in your device settings.</p>
-
-  <h2>Data Retention</h2>
-  <p>Anonymous session data is retained for as long as you use the app. If you sign in with Google, your data is linked to your account until you request deletion. To request deletion of your data, contact us at <a href="mailto:gospelguideapp@gmail.com">gospelguideapp@gmail.com</a>.</p>
-
-  <h2>Children's Privacy</h2>
-  <p>Gospel Guide is not directed at children under 13. We do not knowingly collect personal information from children under 13.</p>
-
-  <h2>Changes to This Policy</h2>
-  <p>We may update this policy from time to time. We will update the "Last updated" date at the top of this page when we do. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
-
-  <h2>Contact</h2>
-  <p>If you have any questions about this privacy policy or your data, please contact us at:<br/>
-  <a href="mailto:gospelguideapp@gmail.com">gospelguideapp@gmail.com</a></p>
-
-</main>
-
-<footer>
-  &copy; 2026 Sol Softworks &nbsp;·&nbsp; Gospel Guide
-</footer>
+  <footer>&copy; 2026 Sol Softworks</footer>
 
 </body>
 </html>
