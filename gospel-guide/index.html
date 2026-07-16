@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gospel Guide — AI-Powered Bible Guidance</title>
+  <meta name="description" content="Bring your burdens. Find wisdom in scripture. Gospel Guide is an AI-powered devotional app grounded in the King James Bible." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #F5E6C8;
+      color: #2C1810;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: #2C1810;
+      color: #F5E6C8;
+      text-align: center;
+      padding: 80px 24px 64px;
+    }
+    .hero-mark {
+      font-size: 1rem;
+      color: #CCAA66;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .hero-tagline {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: #CCAA66;
+      font-style: italic;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: #8B6914;
+      color: #fff;
+      text-decoration: none;
+      padding: 16px 40px;
+      border-radius: 12px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #B8860B; }
+    .cta-note {
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: #888;
+      font-style: italic;
+    }
+
+    /* ── Scripture banner ── */
+    .scripture {
+      background: #FAF0DC;
+      border-top: 2px solid #CCAA66;
+      border-bottom: 2px solid #CCAA66;
+      text-align: center;
+      padding: 40px 24px;
+    }
+    .scripture blockquote {
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      font-style: italic;
+      color: #2C1810;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .scripture cite {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.85rem;
+      color: #8B6914;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+    /* ── Features ── */
+    .features {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 72px 24px;
+    }
+    .features h2 {
+      text-align: center;
+      font-size: 1.6rem;
+      color: #8B6914;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 48px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+    }
+    .feature {
+      background: #FAF0DC;
+      border: 1px solid #CCAA66;
+      border-radius: 16px;
+      padding: 28px 24px;
+    }
+    .feature-icon {
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+    }
+    .feature h3 {
+      font-size: 1.05rem;
+      color: #2C1810;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+    .feature p {
+      font-size: 0.95rem;
+      color: #5C3D2E;
+      line-height: 1.6;
+    }
+
+    /* ── How it works ── */
+    .how {
+      background: #2C1810;
+      color: #F5E6C8;
+      padding: 72px 24px;
+      text-align: center;
+    }
+    .how h2 {
+      font-size: 1.6rem;
+      color: #CCAA66;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 48px;
+    }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 560px;
+      margin: 0 auto 48px;
+      text-align: left;
+    }
+    .step {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #8B6914;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .step-text h3 {
+      font-size: 1rem;
+      color: #F5E6C8;
+      margin-bottom: 4px;
+    }
+    .step-text p {
+      font-size: 0.9rem;
+      color: #CCAA66;
+      line-height: 1.5;
+      font-style: italic;
+    }
+    .how .cta-btn {
+      margin-top: 8px;
+    }
+
+    /* ── Free vs Supporter ── */
+    .pricing {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 72px 24px;
+      text-align: center;
+    }
+    .pricing h2 {
+      font-size: 1.6rem;
+      color: #8B6914;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .pricing-sub {
+      color: #5C3D2E;
+      font-style: italic;
+      margin-bottom: 40px;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    @media (max-width: 520px) {
+      .pricing-grid { grid-template-columns: 1fr; }
+    }
+    .plan {
+      border: 2px solid #CCAA66;
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: left;
+      background: #FAF0DC;
+    }
+    .plan.highlighted {
+      border-color: #8B6914;
+      background: #2C1810;
+      color: #F5E6C8;
+    }
+    .plan-name {
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #8B6914;
+      margin-bottom: 8px;
+      font-family: -apple-system, sans-serif;
+    }
+    .plan.highlighted .plan-name { color: #CCAA66; }
+    .plan-price {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-family: -apple-system, sans-serif;
+    }
+    .plan.highlighted .plan-price { color: #F5E6C8; }
+    .plan ul {
+      list-style: none;
+      padding: 0;
+    }
+    .plan ul li {
+      padding: 6px 0;
+      font-size: 0.95rem;
+      color: #5C3D2E;
+      border-bottom: 1px solid #CCAA66;
+      line-height: 1.5;
+    }
+    .plan ul li:last-child { border-bottom: none; }
+    .plan ul li::before { content: '✦  '; color: #8B6914; font-size: 0.7rem; }
+    .plan.highlighted ul li { color: #CCAA66; border-color: #5C3D2E; }
+    .plan.highlighted ul li::before { color: #CCAA66; }
+
+    /* ── Footer ── */
+    footer {
+      background: #1a0f08;
+      color: #5C3D2E;
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.8rem;
+      font-family: -apple-system, sans-serif;
+    }
+    footer a { color: #8B6914; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    footer .links { margin-bottom: 12px; }
+    footer .links a { margin: 0 12px; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-mark">✦ Gospel Guide ✦</div>
+    <h1>Wisdom for<br/>every burden</h1>
+    <p class="hero-tagline">An AI-powered devotional grounded in the King James Bible.<br/>Ask anything. Receive scripture.</p>
+    <a href="#" class="cta-btn">Download on Google Play</a>
+    <p class="cta-note">Coming soon to Android</p>
+  </section>
+
+  <!-- Scripture -->
+  <section class="scripture">
+    <blockquote>
+      "Come unto me, all ye that labour and are heavy laden, and I will give you rest."
+    </blockquote>
+    <cite>— Matthew 11:28</cite>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2>✦ What's Inside ✦</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-icon">📖</div>
+        <h3>Scripture-Grounded Guidance</h3>
+        <p>Every response is rooted in the King James Bible — 31,000+ verses searched to find what speaks to your situation.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🕊️</div>
+        <h3>Daily Word</h3>
+        <p>A new verse and AI reflection delivered every morning. Free for all users. A daily moment of stillness.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔍</div>
+        <h3>Verse Explorer</h3>
+        <p>Browse all 66 books of the KJV. Ask what any verse means and go deeper with follow-up questions.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔖</div>
+        <h3>Save Favourites</h3>
+        <p>Keep the responses that speak to you. Your personal collection of scripture and guidance, always at hand.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="how">
+    <h2>✦ How It Works ✦</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <h3>Bring your question or burden</h3>
+          <p>Type whatever is on your heart — a worry, a decision, a struggle, or a question of faith.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <h3>Scripture is searched</h3>
+          <p>The app searches all 31,000+ KJV verses to find those most relevant to what you've shared.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <h3>Receive wisdom</h3>
+          <p>A thoughtful, scripture-grounded response is generated — with cited verses you can tap to explore.</p>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="cta-btn">Get Gospel Guide</a>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing">
+    <h2>✦ Free &amp; Supporter ✦</h2>
+    <p class="pricing-sub">Start for free. Upgrade whenever you're ready.</p>
+    <div class="pricing-grid">
+      <div class="plan">
+        <div class="plan-name">Free</div>
+        <div class="plan-price">£0</div>
+        <ul>
+          <li>2 conversations per day</li>
+          <li>Daily Word &amp; reflection</li>
+          <li>Browse all 31k KJV verses</li>
+          <li>1 free Verse AI explanation</li>
+        </ul>
+      </div>
+      <div class="plan highlighted">
+        <div class="plan-name">Supporter</div>
+        <div class="plan-price">£2.99 <span style="font-size:1rem;font-weight:normal">/ month</span></div>
+        <ul>
+          <li>20 conversations per day</li>
+          <li>Unlimited Verse Explorer AI</li>
+          <li>Save favourite responses</li>
+          <li>Full conversation history</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="links">
+      <a href="/gospel-guide/privacy-policy/">Privacy Policy</a>
+      <a href="mailto:gospelguideapp@gmail.com">Contact</a>
+      <a href="/">Sol Softworks</a>
+    </div>
+    &copy; 2026 Sol Softworks &nbsp;·&nbsp; Gospel Guide
+  </footer>
+
+</body>
+</html>
